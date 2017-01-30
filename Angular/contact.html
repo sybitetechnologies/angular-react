@@ -1,0 +1,47 @@
+<form>
+  <div class="form-group">
+    <div class="form-padding">
+    <label for="exampleInputPassword1">id</label>
+    <input type="id" class="form-control" id="id" placeholder="id" ng-model="master.id">
+    </div>
+    <div class="form-padding">
+    <label for="exampleTextarea">Title</label>
+    <textarea class="form-control" id="title" ng-model="master.title"></textarea>
+    </div>
+    <div class="form-padding">
+    <label for="exampleTextarea">Body</label>
+    <textarea class="form-control" id="body" ng-model="master.category"></textarea>
+    </div>
+    <p style="text-align:center">
+    <button type="button" class="btn btn-primary" ng-click="postMethod(master)">Submit</button>
+    </p>
+      <div my-info-msg></div>
+  </div>
+</form>
+   <h1>USERS</h1>
+       <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>title</th>
+                        <th>category</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="users in user track by $index">
+                        <td>{{users.id}}</td>
+                        <td>{{users.title}}</td>
+                        <td>{{users.category}}</td>
+
+                        <td>
+                            <input type="button" class="btn btn-default" value="Edit"/>
+                        </td>
+                        <td>
+                            <input type="button"class="btn btn-default" value="Delete"/>
+                        </td>
+                    </tr>
+
+                </tbody>
+        </table>
